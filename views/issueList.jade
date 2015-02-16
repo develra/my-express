@@ -1,0 +1,13 @@
+extends layout.jade
+
+block content
+    div.row
+        div.six.columns Title
+        div.six.columns Number
+    each issue in issues
+        div.row
+            div.six.columns
+                a(href='/issue/view/' + (issue.id))
+                    = issue.title
+            div.six.columns
+                = issue.number

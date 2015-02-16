@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    // display the detail of the first item
+    - var issue = issues[0]
+    h3= issue.id
+    div#example-grid
+        div.row
+            div.three.columns Title:
+            div.three.columns= issue.title
+        div.row
+            div.three.columns Created By:
+            div.three.columns= issue.user.login
+        div.row
+            div.six.columns!= issue.body

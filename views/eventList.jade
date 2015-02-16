@@ -1,0 +1,14 @@
+extends layout.jade
+
+block content
+    div.row
+        h4
+        div.six.columns Id
+        div.six.columns Type
+    each event in events
+        div.row
+            div.six.columns
+                a(href='/event/view/' + (event.id))
+                    = event.id
+            div.six.columns
+                = event.type

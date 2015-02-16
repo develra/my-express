@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    // display the detail of the first item
+    - var event= events[0]
+    h3= event.id
+    div#example-grid
+        div.row
+            div.three.columns Created By:
+            div.three.columns= event.actor.login
+        div.row
+            div.three.columns Created In:
+            div.three.columns= event.repo.name
+        div.row
+            div.three.columns Created On:
+            div.three.columns= event.created_at
